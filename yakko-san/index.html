@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<script src="origami-yakko-san.js"></script>
+<script>
+
+'use strict';
+
+window.addEventListener('load', function() {
+  // 72dpi
+  // 150 / 25.4 * 72 ~= 425
+  //var size = 340; // 120x120
+  var size = 425; // 150x150
+
+  var imgUrl = 'test.png';
+  //var imgUrl = 's1.png';
+
+  var ctx = document.getElementById('cv').getContext('2d');
+  printOrigami(ctx, imgUrl, size);
+
+  document.getElementById('smpl').src = imgUrl;
+
+});
+
+</script>
+</head>
+<body>
+  <img src="tmpl.png" style="vertical-align:top;width:200px;height:200px;" />
+  <img id="smpl" style="vertical-align:top;" />
+  </br/>
+  <canvas id="cv"></canvas>
+</body>
+</html>
