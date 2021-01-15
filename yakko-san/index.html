@@ -7,16 +7,19 @@
 'use strict';
 
 window.addEventListener('load', function() {
+
   // 72dpi
-  // 150 / 25.4 * 72 ~= 425
-  //var size = 340; // 120x120
-  var size = 425; // 150x150
+  var size = 150 / 25.4 * 72; // 150x150
 
   var imgUrl = 'test.png';
   //var imgUrl = 's1.png';
 
   var ctx = document.getElementById('cv').getContext('2d');
-  printOrigami(ctx, imgUrl, size);
+  var img = document.createElement('img');
+  img.addEventListener('load', function() {
+    renderOrigami(ctx, img, size);
+  });
+  img.src = imgUrl;
 
   document.getElementById('smpl').src = imgUrl;
 
