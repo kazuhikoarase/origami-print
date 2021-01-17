@@ -122,6 +122,8 @@ var renderOrigami = function(ctx, img, size) {
   bl();
   br();
 
+  draw([0, 0, 8, 0, 8, 4, 0, 4], [0.25, 0, 0, 0.25, 3, 1.75]);
+
   ctx.restore();
 
   var guide = function() {
