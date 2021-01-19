@@ -14,10 +14,9 @@ window.addEventListener('load', function() {
   var imgUrl = 'test.png';
   //var imgUrl = 's1.png';
 
-  var ctx = document.getElementById('cv').getContext('2d');
   var img = document.createElement('img');
   img.addEventListener('load', function() {
-    renderOrigami(ctx, img, size);
+    document.body.appendChild(createOrigamiYakkoSan(img, size) );
   });
   img.src = imgUrl;
 
@@ -31,6 +30,5 @@ window.addEventListener('load', function() {
   <img src="tmpl.png" style="vertical-align:top;width:200px;height:200px;" />
   <img id="smpl" style="vertical-align:top;" />
   </br/>
-  <canvas id="cv"></canvas>
 </body>
 </html>

@@ -1,10 +1,14 @@
 //
+// origami-yakko-san
 //
+// based on Japanese Traditional Origami Yakko-San
 //
 
 'use strict';
 
-var renderOrigami = function(ctx, img, size) {
+var createOrigamiYakkoSan = function(img, size) {
+
+  var ctx = document.createElement('canvas').getContext('2d');
 
   size = Math.floor(size || 100);
 
@@ -144,4 +148,5 @@ var renderOrigami = function(ctx, img, size) {
   };
 
 //  guide();
+  return ctx.canvas;
 };
